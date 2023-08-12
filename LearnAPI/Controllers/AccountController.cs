@@ -36,8 +36,21 @@ namespace LearnAPI.Controllers
             {
                 return Unauthorized();
             }
-
+            
             return Ok(result);
+        }
+
+        [HttpGet("GetAllUsers")]
+        public async Task<IActionResult> GetAllUsers()
+        {
+            try
+            {
+                return Ok(await accountRepo.GetAllAccount());
+            }
+            catch
+            {
+                return BadRequest();
+            }
         }
     }
 }

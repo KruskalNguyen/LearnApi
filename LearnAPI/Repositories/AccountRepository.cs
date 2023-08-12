@@ -1,5 +1,8 @@
-﻿using LearnAPI.ModelView;
+﻿using AutoMapper;
+using LearnAPI.Data;
+using LearnAPI.ModelView;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using MyApiNetCore6.Data;
 using System.IdentityModel.Tokens.Jwt;
@@ -8,17 +11,20 @@ using System.Text;
 
 namespace LearnAPI.Repositories
 {
-    public class AccountRepository: IAccountRepository
+    public class AccountRepository : IAccountRepository
     {
         private readonly UserManager<ApplicationUser> userManager;
         private readonly SignInManager<ApplicationUser> signInManager;
         private readonly IConfiguration configuration;
+        private readonly IdentityContext _context;
 
-        public AccountRepository(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration)
+
+        public AccountRepository(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IConfiguration configuration, IdentityContext context)
         {
             this.userManager = userManager;
             this.signInManager = signInManager;
             this.configuration = configuration;
+            _context = context;
         }
 
         public async Task<string> SignInAsync(SignIn model)
@@ -60,6 +66,12 @@ namespace LearnAPI.Repositories
             };
 
             return await userManager.CreateAsync(user, model.Password);
+        }
+
+        public async Task<List<ApplicationUser>> GetAllAccount()
+        {
+            var acc = await _context.Users!.ToListAsync();
+            return acc;    
         }
     }
 }

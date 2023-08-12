@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <History>False|2023-08-12T08:37:40.5733684Z;False|2023-08-12T15:30:45.3456756+07:00;False|2023-08-12T15:29:53.9020485+07:00;False|2023-08-12T15:22:39.5382499+07:00;False|2023-08-12T15:17:34.0843643+07:00;False|2023-08-12T15:10:01.0824062+07:00;False|2023-08-12T15:07:58.8959358+07:00;False|2023-08-12T15:07:31.3337432+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="LearnAPI">
+      <Value>Data Source=mssql-139732-0.cloudclusters.net,10085%3bInitial Catalog=LearnAPI%3bPersist Security Info=True%3bUser ID=Khang%3bPassword=Khang%40123</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="LearnAPI.Data.IdentityContext">
+      <Value>Data Source=mssql-139732-0.cloudclusters.net,10085%3bInitial Catalog=LearnAPI%3bPersist Security Info=True%3bUser ID=Khang%3bPassword=Khang%40123</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

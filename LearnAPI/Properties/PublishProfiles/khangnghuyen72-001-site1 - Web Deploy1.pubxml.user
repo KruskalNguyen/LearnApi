@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword />
+    <History>True|2023-08-12T13:25:19.3144627Z;False|2023-08-12T20:24:36.3845659+07:00;True|2023-08-12T20:14:14.8749493+07:00;False|2023-08-12T20:10:12.8959863+07:00;False|2023-08-12T15:59:53.0908531+07:00;False|2023-08-12T15:55:17.2331904+07:00;False|2023-08-12T15:45:48.0431280+07:00;False|2023-08-12T15:42:38.6080891+07:00;False|2023-08-12T15:40:17.2600123+07:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="LearnAPI">
+      <Value>Data Source=mssql-139732-0.cloudclusters.net,10085%3bInitial Catalog=LearnAPI%3bPersist Security Info=True%3bUser ID=Khang%3bPassword=Khang%40123</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>
